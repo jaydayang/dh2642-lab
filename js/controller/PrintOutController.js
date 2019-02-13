@@ -1,1 +1,0 @@
-// JavaScript Documentvar PrintOutController = function (view, model){		view.printOutBtn.on('click', function(event){		view.hide();		$("#printOut").show();			//view.style.display = 'none';		//view.contianer.hide();	})	}

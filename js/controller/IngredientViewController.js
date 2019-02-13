@@ -1,1 +1,14 @@
-// JavaScript Documentvar IngredientViewController = function (view, model){	view.addToMenuBtn.on('click', function(event){		model.addDishToMenu(2);	})			}
+// JavaScript Document
+var IngredientViewController = function (view, model,app){
+
+		
+	view.addToMenuBtn.on('click', function(event){
+	
+		
+		model.addDishToMenu(model.onedish.id);
+		
+	})
+
+
+}
+
