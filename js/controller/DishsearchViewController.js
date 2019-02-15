@@ -1,5 +1,5 @@
 // JavaScript Document
-var DishsearchViewController = function (view, model){
+var DishsearchViewController = function (view, model,app){
 
 
 	view.searchBtn.on('click',function(event){
@@ -17,8 +17,7 @@ var DishsearchViewController = function (view, model){
  	   model.setDish(id);
  	   //console.log("idddddd"+id);
  	   view.hide();
- 	   $("#detailView").show();
- 	   $("#ingredientList").show();
+ 	   app.jumpTo("DetailView");
       
  	})
 	

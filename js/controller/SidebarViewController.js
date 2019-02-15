@@ -10,9 +10,7 @@ var SidebarViewController = function (view, model,app){
 	})
 
 	view.confirmBtn.on('click', function(event){
-		app.hideAllViews();
-		$('#dinnerView').show();
-		$('#headbarView').show();
+		app.jumpTo("DinnerView");
 
 	})
 	//$("#ingredientList").addToMenuBtn.on('click',function(event){

@@ -32,8 +32,19 @@ $(function() {
 	
 	
 
-	this.hideAllViews = function(){
+	
 		
+		$('#detailView').hide();
+		$('#dinnerView').hide();
+		$('#dishitemView').hide();
+		$('#dishsearchView').hide();
+		$('#headbarView').hide();
+		$('#ingredientList').hide();
+		$('#printOut').hide();
+		$('#sidebarView').hide();
+	
+
+	this.jumpTo = function(showingView){
 		$('#detailView').hide();
 		$('#dinnerView').hide();
 		$('#dishitemView').hide();
@@ -45,9 +56,30 @@ $(function() {
 		$('#welcomeView').hide();
 
 
+		switch(showingView){
+			case "DishSearchView":
+			$('#sidebarView').show();
+			$('#dishsearchView').show();
+				break;
+
+			
+
+			case "DinnerView":
+			$('#dinnerView').show();
+			$('#headbarView').show();
+			break;
+
+			case "PrintOutView":
+			$('#printOut').show();
+			$('#headbarView').show();
+			break;
+
+			case "DetailView":
+			$('#sidebarView').show();
+			$("#detailView").show();
+ 	        $("#ingredientList").show();
+		}
 	}
 
-	this.hideAllViews();
-	$('#welcomeView').show();
 
 });
